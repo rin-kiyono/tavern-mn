@@ -452,6 +452,10 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
             { from: 'klona', imports: ['klona'] },
             { from: 'vue-final-modal', imports: ['useModal'] },
             { from: 'zod', imports: ['z'] },
+<<<<<<< HEAD
+=======
+            { from: 'type-fest', imports: [['*', 'TypeFest']], type: true },
+>>>>>>> fdfcbc5386747889d0b011123d4dde6612c67d1b
           ],
         }),
         unpluginVueComponents({
@@ -540,7 +544,11 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
 
       if (
         ['vue', 'vue-router'].every(key => request !== key) &&
+<<<<<<< HEAD
         ['pixi', 'react', 'vue', 'motion'].some(key => request.includes(key))
+=======
+        ['pixi', 'react', 'vue'].some(key => request.includes(key))
+>>>>>>> fdfcbc5386747889d0b011123d4dde6612c67d1b
       ) {
         return callback();
       }
